@@ -1,0 +1,5 @@
+﻿  TIRGUL.cpp
+C:\Users\User\source\repos\TIRGUL1\TIRGUL.h(102,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'TIRGUL.cpp')
+  
+  TIRGUL1.vcxproj -> C:\Users\User\source\repos\TIRGUL1\x64\Debug\TIRGUL1.exe
