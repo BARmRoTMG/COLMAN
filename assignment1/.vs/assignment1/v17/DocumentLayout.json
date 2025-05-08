@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\COLMAN\\assignment1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E73BF5A8-BA82-40ED-957A-B353A815E198}|assignment1.vcxproj|C:\\Users\\User\\Downloads\\assignment\\Util.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E73BF5A8-BA82-40ED-957A-B353A815E198}|assignment1.vcxproj|C:\\Users\\User\\Downloads\\assignment\\MainTrain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainTrain.c",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\assignment\\MainTrain.c",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\assignment\\MainTrain.c",
+              "ToolTip": "C:\\Users\\User\\Downloads\\assignment\\MainTrain.c",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\assignment\\MainTrain.c",
+              "ViewState": "AgIAACYAAAAAAAAAAAAcwDAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-07T11:36:42.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Util.c",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\assignment\\Util.c",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\assignment\\Util.c",
+              "ToolTip": "C:\\Users\\User\\Downloads\\assignment\\Util.c",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\assignment\\Util.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-07T11:33:31.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
