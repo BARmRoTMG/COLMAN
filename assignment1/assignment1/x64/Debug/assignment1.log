@@ -1,5 +1,4 @@
-﻿  MainTrain.c
-  Util.c
-  Generating Code...
-C:\Users\User\Documents\GitHub\COLMAN\assignment1\Util.c(48,1): warning C4715: 'CalculateSalary': not all control paths return a value
-  assignment1.vcxproj -> C:\Users\User\Documents\GitHub\COLMAN\assignment1\x64\Debug\assignment1.exe
+﻿  Util.c
+D:\Bar Projects\COLMAN\assignment1\Util.c(60,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Bar Projects\COLMAN\assignment1\Util.c(62,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  assignment1.vcxproj -> D:\Bar Projects\COLMAN\assignment1\x64\Debug\assignment1.exe

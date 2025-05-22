@@ -35,10 +35,13 @@ void	Test5(int num, int result)
 		printf("your SumOfDigits( %d ) function is wrong (-2)\n", num);
 }
 
-void Test6(int num1, int num2, int result)
+void Test6(int num1, int num2, int expected)
 {
-	if (Contains(num1, num2) != result)
-		printf("your Contains( %d, %d ) function is wrong (-2)\n", num1, num2);
+	int actual = Contains(num1, num2);
+	if (actual != expected)
+		printf("❌ your Contains(%d, %d) = %d, expected %d (-2)\n", num1, num2, actual, expected);
+	else
+		printf("✅ your Contains(%d, %d) = %d (PASS)\n", num1, num2, actual);
 }
 
 void main()
