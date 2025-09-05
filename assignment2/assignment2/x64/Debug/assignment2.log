@@ -1,0 +1,3 @@
+﻿  Utils.c
+C:\Users\barba\Downloads\assignment\Utils.c(132,14): warning C4013: 'strlen' undefined; assuming extern returning int
+  assignment2.vcxproj -> D:\Bar Projects\COLMAN\assignment2\x64\Debug\assignment2.exe
