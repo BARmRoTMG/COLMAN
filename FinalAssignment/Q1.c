@@ -1,30 +1,40 @@
 #include "exam.h"
 
-int* weightedEvenColumnSums(int matrix[][COLS], int rows) 
+int* weightedEvenColumnSums(int matrix[][COLS], int rows)
 {
-	if (rows <= 0) return NULL;
+    // בדיקת מקרי קצה
+    if (rows <= 0 || matrix == NULL)
+        return NULL;
 
-	int* res = (int*)malloc(rows * sizeof(int));
-	if (!res) return NULL;
+    // הקצאת זיכרון לתוצאות
+    int* res = (int*)malloc(rows * sizeof(int));
+    if (!res)
+        return NULL;
 
-	//שורות 
-	for (int i = 0; i < rows; i++)
-	{
-		int max = matrix[i][0];
-		int evenSum = 0;
+    // לולאה על כל השורות במטריצה
+    for (int i = 0; i < rows; ++i)
+    {
+        int maxVal = matrix[i][0];   // ערך התחלתי למקסימום
+        int evenSum = 0;             // סכום עמודות זוגיות
 
-		//עמודות
-		for (int j = 0; j < COLS; j++)
-		{
-			int temp = matrix[i][j];
+        // מעבר על כל העמודות בשורה i 
+        for (int j = 0; j < COLS; ++j)
+        {
+            int val = matrix[i][j];
 
-			if (temp > max)
-				max = temp;
+            // עדכון מקסימום אם נמצא ערך גדול יותר 
+            if (val > maxVal)
+                maxVal = val;
 
-			if (j % 2 == 0)
-				evenSum += temp;
-		}
-		res[i] = evenSum * max;
-	}
-	return res;
+            // חיבור הערך אם העמודה זוגית
+            if ((j & 1) == 0)
+                evenSum += val;
+        }
+
+        // שמירת התוצאה במערך הפלט
+        res[i] = evenSum * maxVal;
+    }
+
+    // החזרת המערך הדינאמי
+    return res;
 }

@@ -7,54 +7,124 @@ void fx1()
 	count1++;
 }
 
-void TestQ1(int m[][COLS], int rows, const int expected[], int n)
-{
-	int ok = 1;
-	int* got = weightedEvenColumnSums(m, rows);
-
-	if (!got)
-	{
-		ok = 0;
-	}
-	else
-	{
-		for (int i = 0; i < n; ++i)
-		{
-			if (got[i] != expected[i])
-			{
-				ok = 0;
-				break;
-			}
-		}
-	}
-
-	if (!ok)
-		printf("your weightedEvenColumnSums( matrix, %d ) function is wrong (-2)\n", rows);
-
-	if (got) free(got);
-}
-
-/* פונקציה להשוואת מערכים */
+//השוואת מערכים 
 int arrays_equal(int* a, int* b, int n)
 {
 	for (int i = 0; i < n; i++)
 		if (a[i] != b[i]) return 0;
 	return 1;
 }
+// השוואת מחרוזות
+int strings_equal_safe(const char* a, const char* b)
+{
+	// שני מצביעים NULL נחשבים שווים
+	if (!a && !b) return 1;
 
-/* פונקציית בדיקה ל-Q2 */
+	// אם רק אחד NULL – לא שווה
+	if (!a || !b) return 0;
+
+	// השוואה תו-תו עד סוף שתי המחרוזות
+	int i = 0;
+	while (a[i] != '\0' && b[i] != '\0')
+	{
+		if (a[i] != b[i])
+			return 0;
+		++i;
+	}
+
+	// שווים אם שניהם הסתיימו יחד
+	return (a[i] == '\0' && b[i] == '\0');
+}
+
+
+void TestQ1(int m[][COLS], int rows, const int expected[], int n)
+{
+	int* got = weightedEvenColumnSums(m, rows);
+
+	/* מקרה קצה: אם rows<=0 או שהמצביע למטריצה NULL – נצפה לקבל NULL */
+	if (rows <= 0 || m == NULL)
+	{
+		if (got != NULL)
+		{
+			printf("your weightedEvenColumnSums(matrix, %d) should return NULL for invalid input (-2)\n", rows);
+			free(got);
+		}
+		return;
+	}
+
+	/* במקרה רגיל – אם קיבלנו NULL זה אומר כשלון בחישוב */
+	if (!got)
+	{
+		printf("your weightedEvenColumnSums(matrix, %d) returned NULL for valid input (-2)\n", rows);
+		return;
+	}
+
+	/* השוואת הערכים המוחזרים לערכים הצפויים */
+	for (int i = 0; i < n; ++i)
+	{
+		if (got[i] != expected[i])
+		{
+			printf("your weightedEvenColumnSums(matrix, %d) function is wrong (-2)\n", rows);
+			free(got);
+			return;
+		}
+	}
+
+	/* אם הכל תקין – משחררים את הזיכרון */
+	free(got);
+}
+
 void TestQ2(int in[], int size, int k, int expected[], int n)
 {
-	int arr[100];  // נשתמש בהעתק כדי לא להרוס את המקור
-	for (int i = 0; i < size; i++) arr[i] = in[i];
+	int arr[100];  // נשתמש בהעתק כדי לא לשנות את המערך המקורי בבדיקה
 
+	// מעתיקים את כל הערכים למערך arr
+	for (int i = 0; i < size; i++)
+		arr[i] = in[i];
+
+	// מפעילים את הפונקציה הנבדקת
 	rotate_right(arr, size, k);
 
+	// השוואה מול התוצאה הצפויה
 	if (!arrays_equal(arr, expected, n))
 	{
 		printf("your rotate_right(arr, %d, %d) function is wrong (-2)\n", size, k);
 	}
 }
+
+void TestQ3(const char* s1, const char* s2, int expected)
+{
+	// קריאה לפונקציה הנבדקת
+	int got = areAnagrams(s1, s2);
+
+	// בדיקה מול התוצאה הצפויה
+	if (got != expected)
+	{
+		// הדפסה בטוחה גם כאשר אחד המצביעים הוא NULL
+		const char* a = (s1 ? s1 : "(null)");
+		const char* b = (s2 ? s2 : "(null)");
+		printf("your areAnagrams(\"%s\", \"%s\") function is wrong (-2)\n", a, b);
+	}
+}
+
+void TestQ4(const char* in, const char* expected)
+{
+	// קריאה לפונקציה הנבדקת
+	char* got = removeDuplicates(in);
+
+	// בדיקה מול התוצאה הצפויה
+	if (!strings_equal_safe(got, expected))
+	{
+		const char* a = (in ? in : "(null)");
+		const char* e = (expected ? expected : "(null)");
+		const char* g = (got ? got : "(null)");
+		printf("your removeDuplicates(\"%s\") returned \"%s\" but expected \"%s\" (-2)\n", a, g, e);
+	}
+
+	// שחרור זיכרון
+	if (got) free(got);
+}
+
 
 int main()
 {
@@ -203,7 +273,76 @@ int main()
 
 #pragma endregion
 
+#pragma region Q3
+	printf("\nQ3 - areAnagrams\n");
 
+	// 1) דוגמת אנגרמה בסיסית
+	TestQ3("listen", "silent", 1);
+
+	// 2) אות אחת שונה -> לא אנגרמה
+	TestQ3("hello", "hella", 0);
+
+	// 3) זהות מלאה של המחרוזות
+	TestQ3("aa", "aa", 1);
+
+	// 4) אורכים שונים -> לא אנגרמה
+	TestQ3("ab", "aba", 0);
+
+	// 5) חזרות של אותיות בסדרים שונים
+	TestQ3("aabbcc", "abcabc", 1);
+
+	// 6) רגישות לאותיות גדולות/קטנות (Case-Sensitive כברירת מחדל)
+	TestQ3("Abc", "abc", 0);
+
+	// 7) מחרוזות ריקות -> אנגרמה תקפה
+	TestQ3("", "", 1);
+
+	// 8) ריקה מול לא-ריקה -> לא אנגרמה
+	TestQ3("", "a", 0);
+
+	// 9) כולל תווים לא-אותיים (כל תו נספר) – כאן זה כן אנגרמה
+	TestQ3("rail!", "lair!", 1);
+
+	// 10) מקרה קצה: אחד המצביעים NULL -> לא אנגרמה
+	TestQ3(NULL, "abc", 0);
+#pragma endregion
+
+#pragma region Q4
+	/*---------------------------Q4---------------------------*/
+
+	printf("\nQ4 - removeDuplicates\n");
+
+	// 1) דוגמה מהמטלה
+	TestQ4("programming", "poain");
+
+	// 2) מחרוזת ריקה -> נשאר ריק
+	TestQ4("", "");
+
+	// 3) כל התווים זהים -> הכל נמחק
+	TestQ4("aaaa", "");
+
+	// 4) כולם ייחודיים -> נשאר אותו הדבר
+	TestQ4("abc", "abc");
+
+	// 5) חזרות מרובות + ייחודי יחיד בסוף
+	TestQ4("aabbccdde", "e");
+
+	// 6) ערבוב חזרות + ייחודיים (סדר נשמר)
+	TestQ4("abac", "bc");
+
+	// 7) רגישות לאותיות גדולות/קטנות (A ו-a שונים)
+	TestQ4("Aa", "Aa");
+
+	// 8) תווים לא-אותיים – נשארים אם ייחודיים
+	TestQ4("a!a?bb ", "!? ");
+
+	// 9) ספרות וקישוטים
+	TestQ4("1122334455x", "x");
+
+	// 10) קלט NULL -> פלט NULL
+	TestQ4(NULL, NULL);
+
+#pragma endregion
 
 	printf("\n\ndone\n");
 	return 0;
