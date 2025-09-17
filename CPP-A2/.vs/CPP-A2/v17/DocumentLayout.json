@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Bar Projects\\COLMAN\\CPP-A2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CF2CE2-FCDC-4E6E-B97E-31E2516B129E}|CPP-A2.vcxproj|D:\\Bar Projects\\COLMAN\\CPP-A2\\Bank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1CF2CE2-FCDC-4E6E-B97E-31E2516B129E}|CPP-A2.vcxproj|solutionrelative:Bank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CF2CE2-FCDC-4E6E-B97E-31E2516B129E}|CPP-A2.vcxproj|D:\\Bar Projects\\COLMAN\\CPP-A2\\Account.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1CF2CE2-FCDC-4E6E-B97E-31E2516B129E}|CPP-A2.vcxproj|solutionrelative:Account.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CF2CE2-FCDC-4E6E-B97E-31E2516B129E}|CPP-A2.vcxproj|D:\\Bar Projects\\COLMAN\\CPP-A2\\MainTrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1CF2CE2-FCDC-4E6E-B97E-31E2516B129E}|CPP-A2.vcxproj|solutionrelative:MainTrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bank.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\CPP-A2\\Bank.cpp",
+              "RelativeDocumentMoniker": "Bank.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\CPP-A2\\Bank.cpp",
+              "RelativeToolTip": "Bank.cpp",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAiwLMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-17T15:52:20.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Account.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\CPP-A2\\Account.cpp",
+              "RelativeDocumentMoniker": "Account.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\CPP-A2\\Account.cpp",
+              "RelativeToolTip": "Account.cpp",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAiwKsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-17T15:43:01.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainTrain.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\CPP-A2\\MainTrain.cpp",
+              "RelativeDocumentMoniker": "MainTrain.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\CPP-A2\\MainTrain.cpp",
+              "RelativeToolTip": "MainTrain.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-17T13:11:07.853Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

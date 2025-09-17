@@ -1,0 +1,15 @@
+D:\Bar Projects\COLMAN\DataStructuresA1\bin\Debug\net8.0\DataStructuresA1.exe
+D:\Bar Projects\COLMAN\DataStructuresA1\bin\Debug\net8.0\DataStructuresA1.deps.json
+D:\Bar Projects\COLMAN\DataStructuresA1\bin\Debug\net8.0\DataStructuresA1.runtimeconfig.json
+D:\Bar Projects\COLMAN\DataStructuresA1\bin\Debug\net8.0\DataStructuresA1.dll
+D:\Bar Projects\COLMAN\DataStructuresA1\bin\Debug\net8.0\DataStructuresA1.pdb
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.AssemblyInfoInputs.cache
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.AssemblyInfo.cs
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.csproj.CoreCompileInputs.cache
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.sourcelink.json
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.dll
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\refint\DataStructuresA1.dll
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.pdb
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\DataStructuresA1.genruntimeconfig.cache
+D:\Bar Projects\COLMAN\DataStructuresA1\obj\Debug\net8.0\ref\DataStructuresA1.dll

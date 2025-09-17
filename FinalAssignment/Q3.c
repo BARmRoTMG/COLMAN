@@ -7,36 +7,42 @@ int areAnagrams(const char* str1, const char* str2)
         return 0;
 
     // טבלת תדירויות לכל תו (ASCII)
-    int freq[256] = { 0 };
+    int* frequency = (int*)calloc(256, sizeof(int));
+
+    if (frequency == NULL) return 0;
 
     // מעבר סימולטני: סופרים מהראשונה ומחסרים מהשנייה
     // אם אחת נגמרת לפני השנייה – האורכים שונים => לא אנגרמה
     int i = 0;
-    while (1)
+    while (str1[i] != '\0' || str2[i] != '\0')
     {
-        unsigned char c1 = (unsigned char)str1[i];
-        unsigned char c2 = (unsigned char)str2[i];
+        // בדיקה שאחת המחרוזות לא נגמרה מוקדם
+        if (str1[i] == '\0' || str2[i] == '\0')
+        {
+            free(frequency);
+            return 0; // אורכים שונים
+        }
 
-        // אם שתי המחרוזות נגמרו יחד – יוצאים מהלולאה
-        if (c1 == '\0' && c2 == '\0')
-            break;
+        unsigned char ch1 = (unsigned char)str1[i];
+        unsigned char ch2 = (unsigned char)str2[i];
 
-        // אם אחת נגמרה לפני השנייה – אורכים שונים
-        if (c1 == '\0' || c2 == '\0')
-            return 0;
+        frequency[ch1]++;    // הוספה לתו מהמחרוזת הראשונה
+        frequency[ch2]--;    // חיסור לתו מהמחרוזת השנייה
 
-        // עדכון התדירויות
-        ++freq[c1];
-        --freq[c2];
-
-        ++i;
+        i++;
     }
 
-    // בדיקה שכל התדירויות התאפסו
-    for (int k = 0; k < 256; ++k)
+
+    // וידוא שכל המונים התאפסו
+    for (int pos = 0; str1[pos] != '\0'; pos++)
     {
-        if (freq[k] != 0)
+        unsigned char current_char = (unsigned char)str1[pos];
+        if (frequency[current_char] != 0)
+        {
+            free(frequency);
             return 0;
+        }
     }
+    free(frequency);
     return 1;
 }
