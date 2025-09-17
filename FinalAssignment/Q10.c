@@ -2,11 +2,13 @@
 
 char* findTopVisitorToDestination(MoovitDB *db, char *destination)
 {
+    // בדיקות
     if (!db || !destination || db->numCustomers <= 0 || !db->customers)
         return NULL;
 
-    int maxCount = 0;        // מספר הנסיעות המקסימלי שנמצא עד כה
-    char* bestName = NULL;   // fullName של הלקוח המוביל (או NULL אם אין בכלל)
+    // מספר נסיעות מקסימאלי
+    int maxCount = 0;
+    char* bestName = NULL;
 
     for (int i = 0; i < db->numCustomers; ++i)
     {
@@ -24,11 +26,11 @@ char* findTopVisitorToDestination(MoovitDB *db, char *destination)
             }
         }
 
-        // עדכון מקסימום: מחליף רק אם גדול באמת -> שוברת שוויון לטובת הראשון
+        // עדכון מקסימום: מחליף רק אם גדול באמת - שוברת שוויון לטובת הראשון
         if (count > maxCount)
         {
             maxCount = count;
-            bestName = c->fullName;  // החזרה תהיה המצביע הזה (לא להקצות/לשחרר)
+            bestName = c->fullName; // החזרה תהיה המצביע הזה - לא להקצות/לשחרר
         }
     }
 

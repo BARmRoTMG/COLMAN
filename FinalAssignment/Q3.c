@@ -2,7 +2,7 @@
 
 int areAnagrams(const char* str1, const char* str2)
 {
-    // מקרה קצה – אחד המצביעים NULL
+    // מקרה קצה
     if (!str1 || !str2)
         return 0;
 
@@ -12,7 +12,7 @@ int areAnagrams(const char* str1, const char* str2)
     if (frequency == NULL) return 0;
 
     // מעבר סימולטני: סופרים מהראשונה ומחסרים מהשנייה
-    // אם אחת נגמרת לפני השנייה – האורכים שונים => לא אנגרמה
+    // אם אחת נגמרת לפני השנייה – האורכים שונים = לא אנגרמה
     int i = 0;
     while (str1[i] != '\0' || str2[i] != '\0')
     {
@@ -26,8 +26,8 @@ int areAnagrams(const char* str1, const char* str2)
         unsigned char ch1 = (unsigned char)str1[i];
         unsigned char ch2 = (unsigned char)str2[i];
 
-        frequency[ch1]++;    // הוספה לתו מהמחרוזת הראשונה
-        frequency[ch2]--;    // חיסור לתו מהמחרוזת השנייה
+        frequency[ch1]++; // הוספה לתו מהמחרוזת הראשונה
+        frequency[ch2]--; // חיסור לתו מהמחרוזת השנייה
 
         i++;
     }

@@ -10,11 +10,11 @@ void rotate_right(int arr[], int size, int k)
 	if (k < 0)
 		k += size; // אם k שלילי – מתקן לסיבוב שמאלה
 	if (k == 0)
-		return;   // אין שינוי נדרש
+		return; // אין שינוי נדרש
 
 	int* tmp = (int*)malloc(size * sizeof(int));
 	if (!tmp)
-		return;   // כשל בהקצאת זיכרון
+		return; // כשל בהקצאת זיכרון
 
 	// מעתיקים כל איבר למיקום החדש אחרי הסיבוב
 	for (int i = 0; i < size; i++)

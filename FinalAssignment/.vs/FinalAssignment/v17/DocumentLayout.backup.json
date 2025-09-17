@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A1276274-811D-4284-A26C-B5F8375A7E7F}|FinalAssignment.vcxproj|D:\\Bar Projects\\COLMAN\\FinalAssignment\\Q1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A1276274-811D-4284-A26C-B5F8375A7E7F}|FinalAssignment.vcxproj|solutionrelative:Q1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1276274-811D-4284-A26C-B5F8375A7E7F}|FinalAssignment.vcxproj|D:\\Bar Projects\\COLMAN\\FinalAssignment\\StudentMain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A1276274-811D-4284-A26C-B5F8375A7E7F}|FinalAssignment.vcxproj|solutionrelative:StudentMain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Q1.c",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\Q1.c",
+              "RelativeDocumentMoniker": "Q1.c",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\Q1.c",
+              "RelativeToolTip": "Q1.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-09-17T10:05:59.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Q10.c",
               "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\Q10.c",
               "RelativeDocumentMoniker": "Q10.c",
@@ -51,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Q9.c",
               "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\Q9.c",
               "RelativeDocumentMoniker": "Q9.c",
@@ -64,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Q8.c",
               "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\Q8.c",
               "RelativeDocumentMoniker": "Q8.c",
@@ -77,20 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StudentMain.c",
               "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\StudentMain.c",
               "RelativeDocumentMoniker": "StudentMain.c",
               "ToolTip": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\StudentMain.c",
               "RelativeToolTip": "StudentMain.c",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAQwI4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-08-24T08:10:46.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "exam.h",
               "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\FinalAssignment\\exam.h",
               "RelativeDocumentMoniker": "exam.h",

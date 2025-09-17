@@ -14,8 +14,8 @@ int* weightedEvenColumnSums(int matrix[][COLS], int rows)
     // לולאה על כל השורות במטריצה
     for (int i = 0; i < rows; ++i)
     {
-        int maxVal = matrix[i][0];   // ערך התחלתי למקסימום
-        int evenSum = 0;             // סכום עמודות זוגיות
+        int maxVal = matrix[i][0]; // ערך התחלתי למקסימום
+        int evenSum = 0; // סכום עמודות זוגיות
 
         // מעבר על כל העמודות בשורה i 
         for (int j = 0; j < COLS; ++j)

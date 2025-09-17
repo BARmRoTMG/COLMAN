@@ -1,5 +1,4 @@
 #include "exam.h"
-
 #define ASCII 256
 
 char* sortByFrequency(const char *str) {
@@ -9,13 +8,13 @@ char* sortByFrequency(const char *str) {
 
     // הקצאה דינמית למחרוזת החדשה
     char* result = malloc(len + 1);
-    if (!result) return NULL;  // בדיקת הקצאה
+    if (!result) return NULL; // בדיקת הקצאה
 
     // מערך לסימון תווים שכבר עובדנו עליהם
     int used[ASCII] = { 0 };
     int pos = 0;
 
-    // עיבור על המחרוזת כמה פעמים - מ-len עד 1
+    // עובר על המחרוזת len פעמים
     for (int f = len; f > 0; f--)
     {
         for (int i = 0; i < len; i++)
@@ -40,7 +39,6 @@ char* sortByFrequency(const char *str) {
             }
         }
     }
-
     result[pos] = '\0';
     return result;
 }
