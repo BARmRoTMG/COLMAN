@@ -927,9 +927,9 @@ namespace winrt::impl
     }
     template <typename D> auto consume_Windows_UI_ViewManagement_IUIViewSettingsStatics<D>::GetForCurrentView() const
     {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics)->GetForCurrentView(&result));
-        return winrt::Windows::UI::ViewManagement::UIViewSettings{ result, take_ownership_from_abi };
+        void* current{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics)->GetForCurrentView(&current));
+        return winrt::Windows::UI::ViewManagement::UIViewSettings{ current, take_ownership_from_abi };
     }
     template <typename D> auto consume_Windows_UI_ViewManagement_IViewModePreferences<D>::ViewSizePreference() const
     {
@@ -2378,11 +2378,11 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics> : produce_base<D, winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics>
     {
-        int32_t __stdcall GetForCurrentView(void** result) noexcept final try
+        int32_t __stdcall GetForCurrentView(void** current) noexcept final try
         {
-            clear_abi(result);
+            clear_abi(current);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::UI::ViewManagement::UIViewSettings>(this->shim().GetForCurrentView());
+            *current = detach_from<winrt::Windows::UI::ViewManagement::UIViewSettings>(this->shim().GetForCurrentView());
             return 0;
         }
         catch (...) { return to_hresult(); }

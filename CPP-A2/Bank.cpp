@@ -35,7 +35,7 @@ Bank::~Bank()
 	{
 		for (int i = 0; i < m_numbeOfAccounts; ++i)
 		{
-			delete m_account[i];  // כל חשבון שיצרנו בהעתקה
+			delete m_account[i];
 		}
 		delete[] m_account;
 		m_account = nullptr;
@@ -93,13 +93,73 @@ void Bank::SetCode(int code) { m_bankCode = code; }
 
 const char* Bank::GetBankName() const { return m_name; }
 Account** Bank::GetAccounts() const { return m_account; }
-int         Bank::GetNumberOfAccounts() const { return m_numbeOfAccounts; }
+
+//int         Bank::GetNumberOfAccounts() const { return m_numbeOfAccounts; }
+
+int Bank::GetNumberOfAccounts() const
+{
+	if (!m_account || m_numbeOfAccounts <= 0)
+		return 0;
+
+	int logicalCount = 0;
+
+	for (int i = 0; i < m_numbeOfAccounts; ++i)
+	{
+		Account* ai = m_account[i];
+		if (!ai) continue;
+
+		int ni = ai->GetTotalPersons();
+		if (ni <= 0)
+		{
+			//Account without owners
+			continue;
+		}
+
+		Person** pi = ai->GetPersons();
+
+		bool isSubset = false;
+		for (int j = 0; j < m_numbeOfAccounts && !isSubset; ++j)
+		{
+			if (i == j) continue;
+			Account* aj = m_account[j];
+			if (!aj) continue;
+
+			int nj = aj->GetTotalPersons();
+			if (nj <= 0) continue;
+
+			Person** pj = aj->GetPersons();
+
+			// האם כל בעלי החשבון ai מופיעים גם ב-aj?
+			bool allFound = true;
+			for (int a = 0; a < ni && allFound; ++a)
+			{
+				int id = pi[a]->GetId();
+				bool found = false;
+				for (int b = 0; b < nj && !found; ++b)
+				{
+					if (pj[b]->GetId() == id) found = true;
+				}
+				if (!found) allFound = false;
+			}
+
+			if (allFound)
+			{
+				isSubset = true; // ai הוא תת-קבוצה של aj → לא נספור אותו
+			}
+		}
+
+		if (!isSubset)
+			++logicalCount;
+	}
+
+	return logicalCount;
+}
+
 double      Bank::GetTotal() const { return m_totalBalance; }
 int         Bank::GetCode() const { return m_bankCode; }
 
 void Bank::AddAccount(const Account& account)
 {
-	// --- בדיקת כפילות "זהות מלאה" (מס' בעלי חשבון, סדר ה-IDs, יתרה) ---
 	Person** newOwners = account.GetPersons();
 	int      newCount = account.GetTotalPersons();
 
@@ -117,20 +177,18 @@ void Bank::AddAccount(const Account& account)
 		}
 		if (same)
 		{
-			// כבר יש חשבון זהה → לא מוסיפים
 			return;
 		}
 	}
 
-	// --- הוספה בטוחה: לא מעתיקים שורדים, רק מרחיבים את מערך המצביעים ---
 	Account** next = new Account * [m_numbeOfAccounts + 1];
 	for (int i = 0; i < m_numbeOfAccounts; ++i)
-		next[i] = m_account[i];                    // לא עושים deep copy לשורדים
+		next[i] = m_account[i];
 
 	next[m_numbeOfAccounts] = new Account(account);
 	next[m_numbeOfAccounts]->SetAccountNumber(m_numbeOfAccounts + 1);
 
-	delete[] m_account;                            // מחליפים רק את מערך המצביעים
+	delete[] m_account;
 	m_account = next;
 
 	m_numbeOfAccounts += 1;
@@ -151,7 +209,7 @@ void Bank::AddPerson(const Person& newPerson, const Account& account, double amo
 		if (m_account[i]->GetAccountNumber() == account.GetAccountNumber())
 		{
 			m_account[i]->AddPerson(newPerson, amount);
-			if (amount > 0.0) m_totalBalance += amount; // משקף את השינוי ביתרה הכוללת
+			if (amount > 0.0) m_totalBalance += amount;
 			return;
 		}
 	}
@@ -171,15 +229,13 @@ void Bank::DeleteAccount(const Account& account)
 	if (idx == -1) return;
 
 	m_totalBalance -= m_account[idx]->GetBalance();
-	delete m_account[idx];                // מוחקים רק את האובייקט הזה
+	delete m_account[idx];
 
-	// דחיסה במקום – לא מעתיקים שורדים!
 	for (int i = idx + 1; i < m_numbeOfAccounts; ++i)
 		m_account[i - 1] = m_account[i];
 
 	m_numbeOfAccounts--;
 
-	// התאמת מערך המצביעים בלבד
 	Account** next = (m_numbeOfAccounts > 0) ? new Account * [m_numbeOfAccounts] : nullptr;
 	for (int i = 0; i < m_numbeOfAccounts; ++i) next[i] = m_account[i];
 	delete[] m_account;
@@ -201,11 +257,11 @@ void Bank::DeletePerson(const Person& p)
 		if (acc->GetTotalPersons() == 0)
 		{
 			m_totalBalance -= acc->GetBalance();
-			delete acc;                      // החשבון התרוקן → מוחקים אותו
+			delete acc;
 		}
 		else
 		{
-			m_account[write++] = acc;        // החשבון שורד → מזיזים קדימה
+			m_account[write++] = acc;
 			newTotal += acc->GetBalance();
 		}
 	}

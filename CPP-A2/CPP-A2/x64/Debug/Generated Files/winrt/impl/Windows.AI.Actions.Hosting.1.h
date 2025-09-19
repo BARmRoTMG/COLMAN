@@ -13,13 +13,6 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions::Hosting
         IActionCatalog(std::nullptr_t = nullptr) noexcept {}
         IActionCatalog(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IActionCatalog2 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IActionCatalog2>
-    {
-        IActionCatalog2(std::nullptr_t = nullptr) noexcept {}
-        IActionCatalog2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IActionDefinition :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IActionDefinition>
@@ -34,33 +27,12 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions::Hosting
         IActionDefinition2(std::nullptr_t = nullptr) noexcept {}
         IActionDefinition2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IActionDefinition3 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IActionDefinition3>
-    {
-        IActionDefinition3(std::nullptr_t = nullptr) noexcept {}
-        IActionDefinition3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IActionEntityRegistrationInfo :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IActionEntityRegistrationInfo>
     {
         IActionEntityRegistrationInfo(std::nullptr_t = nullptr) noexcept {}
         IActionEntityRegistrationInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IActionInstance :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IActionInstance>
-    {
-        IActionInstance(std::nullptr_t = nullptr) noexcept {}
-        IActionInstance(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IActionInstanceDisplayInfo :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IActionInstanceDisplayInfo>
-    {
-        IActionInstanceDisplayInfo(std::nullptr_t = nullptr) noexcept {}
-        IActionInstanceDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IActionOverload :
         winrt::Windows::Foundation::IInspectable,

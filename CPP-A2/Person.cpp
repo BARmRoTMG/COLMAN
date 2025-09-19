@@ -47,7 +47,6 @@ Person::~Person()
 
 void Person::SetName(const char* newName)
 {
-    // self-assignment: אם המצביע זהה למחרוזת הפנימית – אין מה לעשות
     if (newName == m_name) return;
 
     delete[] m_name;

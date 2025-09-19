@@ -117,7 +117,7 @@ void Account::clearTransactions()
         {
             if (m_transactionList[i])
             {
-                m_transactionList[i]->SetDate(NULL); // משחרר את ה-char* שבתוך ה-Transaction
+                m_transactionList[i]->SetDate(NULL);
                 delete m_transactionList[i];
             }
         }
@@ -176,9 +176,6 @@ int           Account::GetTotalPersons() const { return m_totalPersons; }
 Transaction** Account::GetTransactions() { return m_transactionList; }
 int           Account::GetNumOfTransactions() { return m_numberOfTransaction; }
 
-// ===== פעולות =====
-
-// לא לשנות יתרה כאן — רק ליצור Transaction ולתת ל-AddTransaction לטפל
 void Account::Withdraw(double amount, const char* date)
 {
     if (amount <= 0.0) return;
@@ -202,14 +199,13 @@ void Account::AddPerson(const Person& newPerson, double amount)
         next[i] = new Person(*m_persons[i]);
     next[oldCount] = new Person(newPerson);
 
-    clearPersons();                 // מאפס ל-0 וזה בסדר כי שמרנו קודם
+    clearPersons();
     m_persons = next;
-    m_totalPersons = oldCount + 1;  // ← הצבה מדויקת
+    m_totalPersons = oldCount + 1;
 
-    // לפי ה-main: סכום פתיחה ≠ טרנזקציה
     if (amount > 0.0)
     {
-        m_balance += amount;        // רק עדכון יתרה, בלי AddTransaction
+        m_balance += amount;
     }
 }
 
@@ -238,9 +234,9 @@ void Account::DeletePerson(const Person& oldPerson)
         }
     }
 
-    clearPersons();               // מאפס ל-0
+    clearPersons();
     m_persons = next;
-    m_totalPersons = oldCount - 1; // הצבה מדויקת
+    m_totalPersons = oldCount - 1;
 }
 
 void Account::AddTransaction(const Transaction& newTransaction)
@@ -274,7 +270,6 @@ void Account::AddTransaction(const Transaction& newTransaction)
     if (src) src->m_balance -= amt;
     if (dst) dst->m_balance += amt;
 
-    // הוספה ליומן של source (אם קיים)
     if (src)
     {
         Transaction** nextS = new Transaction * [src->m_numberOfTransaction + 1];

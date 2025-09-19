@@ -1,3 +1,6 @@
 D:\Bar Projects\COLMAN\CPP-A2\CPP-A2\x64\Debug\CPP-A2.vcxproj.MdMergeInputs.cache
 D:\Bar Projects\COLMAN\CPP-A2\CPP-A2\x64\Debug\CPP-A2.vcxproj.cppwinrt_plat.cache
 D:\Bar Projects\COLMAN\CPP-A2\CPP-A2\x64\Debug\CPP-A2.vcxproj.cppwinrt_comp.cache
+C:\Users\User\Documents\GitHub\COLMAN\CPP-A2\CPP-A2\x64\Debug\CPP-A2.vcxproj.MdMergeInputs.cache
+C:\Users\User\Documents\GitHub\COLMAN\CPP-A2\CPP-A2\x64\Debug\CPP-A2.vcxproj.cppwinrt_plat.cache
+C:\Users\User\Documents\GitHub\COLMAN\CPP-A2\CPP-A2\x64\Debug\CPP-A2.vcxproj.cppwinrt_comp.cache
