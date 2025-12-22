@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Simulator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|solutionrelative:Project2\\Simulator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\CarDispatcher.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|solutionrelative:Project2\\CarDispatcher.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\CarDispatcher.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|solutionrelative:Project2\\CarDispatcher.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\TrafficLight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|solutionrelative:Project2\\TrafficLight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Simulator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|solutionrelative:Project2\\Simulator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Car.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60749ECF-6E63-4E39-8C9A-0C55BD7ADD37}|Project2\\Project2.vcxproj|solutionrelative:Project2\\Car.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Simulator.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Simulator.cpp",
+              "RelativeDocumentMoniker": "Project2\\Simulator.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Simulator.cpp",
+              "RelativeToolTip": "Project2\\Simulator.cpp",
+              "ViewState": "AgIAADsAAAAAAAAAAAAmwFQAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-22T09:21:12.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Simulator.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Simulator.h",
+              "RelativeDocumentMoniker": "Project2\\Simulator.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Simulator.h",
+              "RelativeToolTip": "Project2\\Simulator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-22T09:20:39.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarDispatcher.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\CarDispatcher.cpp",
+              "RelativeDocumentMoniker": "Project2\\CarDispatcher.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\CarDispatcher.cpp",
+              "RelativeToolTip": "Project2\\CarDispatcher.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-22T09:14:08.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CarDispatcher.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\CarDispatcher.h",
+              "RelativeDocumentMoniker": "Project2\\CarDispatcher.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\CarDispatcher.h",
+              "RelativeToolTip": "Project2\\CarDispatcher.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-22T09:10:01.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrafficLight.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\TrafficLight.h",
+              "RelativeDocumentMoniker": "Project2\\TrafficLight.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\TrafficLight.h",
+              "RelativeToolTip": "Project2\\TrafficLight.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-22T09:09:46.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Car.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Car.h",
+              "RelativeDocumentMoniker": "Project2\\Car.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\Project 2 - Base\\Project2\\Project2\\Car.h",
+              "RelativeToolTip": "Project2\\Car.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-22T09:09:21.472Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
