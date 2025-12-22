@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\MainTrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:MainTrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\PositionComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:PositionComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\UpDown.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:UpDown.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\AvoidPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:AvoidPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\VelocityComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:VelocityComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\EntityFactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3B4388FF-EDFB-40B7-AB3D-45BF21AD2423}|project_05.vcxproj|solutionrelative:EntityFactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainTrain.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\MainTrain.cpp",
+              "RelativeDocumentMoniker": "MainTrain.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\MainTrain.cpp",
+              "RelativeToolTip": "MainTrain.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-16T09:47:15.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PositionComponent.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\PositionComponent.h",
+              "RelativeDocumentMoniker": "PositionComponent.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\PositionComponent.h",
+              "RelativeToolTip": "PositionComponent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-16T09:47:30.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\Game.cpp",
+              "RelativeDocumentMoniker": "Game.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\Game.cpp",
+              "RelativeToolTip": "Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-16T09:36:52.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpDown.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\UpDown.h",
+              "RelativeDocumentMoniker": "UpDown.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\UpDown.h",
+              "RelativeToolTip": "UpDown.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-16T09:34:53.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AvoidPlayer.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\AvoidPlayer.h",
+              "RelativeDocumentMoniker": "AvoidPlayer.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\AvoidPlayer.h",
+              "RelativeToolTip": "AvoidPlayer.h",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwC4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-16T09:34:37.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VelocityComponent.h",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\VelocityComponent.h",
+              "RelativeDocumentMoniker": "VelocityComponent.h",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\VelocityComponent.h",
+              "RelativeToolTip": "VelocityComponent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-16T09:31:17.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EntityFactory.cpp",
+              "DocumentMoniker": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\EntityFactory.cpp",
+              "RelativeDocumentMoniker": "EntityFactory.cpp",
+              "ToolTip": "D:\\Bar Projects\\COLMAN\\cpp_lab\\project_05\\EntityFactory.cpp",
+              "RelativeToolTip": "EntityFactory.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-16T09:27:03.709Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
