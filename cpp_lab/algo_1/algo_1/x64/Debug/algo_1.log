@@ -1,0 +1,5 @@
+﻿  MainTrain.cpp
+D:\Bar Projects\COLMAN\cpp_lab\algo_1\DS_MST.h(73,26): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'MainTrain.cpp')
+  
+  algo_1.vcxproj -> D:\Bar Projects\COLMAN\cpp_lab\algo_1\x64\Debug\algo_1.exe
