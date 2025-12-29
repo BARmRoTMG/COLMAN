@@ -6,6 +6,6 @@ class InteractionSystem
 public:
     void Update( float dt, World& world )
     {
-        
+
     }
 };
