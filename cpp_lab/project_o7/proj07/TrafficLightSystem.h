@@ -4,51 +4,33 @@
 class TrafficLightSystem
 {
 public:
-    void Update(float dt, World& world)
-    {
-        auto controllers = world.View<TrafficLightController>();
+	void Update(float dt, World& world)
+	{
+		auto controllers = world.View<TrafficLightController>();
 
-        if (controllers.empty())
-            return;
+		if (controllers.empty())
+			return;
 
-        Entity controllerEntity = controllers[0];
-        auto& controller = world.GetComponent<TrafficLightController>(controllerEntity);
+		auto& ctrl = world.GetComponent<TrafficLightController>(controllers[0]);
 
-        controller.timer += dt;
+		ctrl.timer += dt;
 
-        if (controller.timer >= 5.0f)
-        {
-            controller.current = next(controller.current);
-            controller.timer = 0.0f;
+		if (ctrl.timer >= 5.0f)
+		{
+			ctrl.timer -= 5.0f;
 
-            auto trafficLights = world.View<TrafficLight>();
+			int currentDir = static_cast<int>(ctrl.current);
+			currentDir = (currentDir + 1) % static_cast<int>(Direction::Total);
+			ctrl.current = static_cast<Direction>(currentDir);
+		}
 
-            for (Entity e : trafficLights)
-            {
-                auto& light = world.GetComponent<TrafficLight>(e);
-                light.green = (light.lane == controller.current);
-            }
-        }
-    }
+		auto lights = world.View<TrafficLight>();
 
-private:
-    Direction next(Direction current)
-    {
-        if (current == Direction::North)
-        {
-            return Direction::East;
-        }
-        else if (current == Direction::East)
-        {
-            return Direction::South;
-        }
-        else if (current == Direction::South)
-        {
-            return Direction::West;
-        }
-        else // Direction::West
-        {
-            return Direction::North;
-        }
-    }
+		for (auto lightEntity : lights)
+		{
+			auto& light = world.GetComponent<TrafficLight>(lightEntity);
+
+			light.green = (light.lane == ctrl.current);
+		}
+	}
 };

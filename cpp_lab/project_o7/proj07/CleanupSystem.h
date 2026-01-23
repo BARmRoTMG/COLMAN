@@ -5,43 +5,28 @@
 class CleanupSystem
 {
 public:
-    void Update(World& world)
-    {
-        // קבל את כל הרכבים
-        auto cars = world.View<CarTag, Position>();
+	void Update(World& world)
+	{
+		const float SCREEN_WIDTH = 800.0f;
+		const float SCREEN_HEIGHT = 800.0f;
 
-        // רשימה של רכבים למחיקה (לא נמחק בזמן הלולאה)
-        std::vector<Entity> toDelete;
+		auto entities = world.View<Position>();
 
-        for (Entity carEntity : cars)
-        {
-            auto& pos = world.GetComponent<Position>(carEntity);
+		std::vector<Entity> toDelete;
 
-            // בדוק אם הרכב יצא מגבולות המסך
-            if (isOutOfBounds(pos))
-            {
-                toDelete.push_back(carEntity);
-            }
-        }
+		for (auto entity : entities)
+		{
+			const auto& pos = world.GetComponent<Position>(entity);
 
-        // מחק את כל הרכבים שיצאו מהמסך
-        for (Entity e : toDelete)
-        {
-            world.DestroyEntity(e);
-        }
-    }
-
-private:
-    bool isOutOfBounds(const Position& pos) const
-    {
-        // התאם את הגבולות לפי גודל החלון שלך
-        const float screenWidth = 800.0f;   // רוחב המסך
-        const float screenHeight = 600.0f;  // גובה המסך
-        const float margin = 100.0f;        // מרווח בטיחות
-
-        return pos.x < -margin ||
-            pos.x > screenWidth + margin ||
-            pos.y < -margin ||
-            pos.y > screenHeight + margin;
-    }
+			if (pos.x < 0.0f || pos.x > SCREEN_WIDTH ||
+				pos.y < 0.0f || pos.y > SCREEN_HEIGHT)
+			{
+				toDelete.push_back(entity);
+			}
+		}
+		for (auto entity : toDelete)
+		{
+			world.DestroyEntity(entity);
+		}
+	}
 };

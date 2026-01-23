@@ -1,0 +1,5 @@
+﻿  MainTrain.cpp
+D:\Bar Projects\COLMAN\cpp_lab\algo_02\Q_Tower.h(23,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'MainTrain.cpp')
+  
+  algo_02.vcxproj -> D:\Bar Projects\COLMAN\cpp_lab\algo_02\x64\Debug\algo_02.exe

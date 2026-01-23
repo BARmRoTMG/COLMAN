@@ -1,0 +1,21 @@
+root {
+  name:traffic_sim
+  traffic_light {
+    direction:North
+    timer:1.25
+  }
+  traffic_light {
+    direction:East
+    timer:0.75
+  }
+  car {
+    lane:Left
+    position:30.0
+    speed:12.5
+  }
+  car {
+    lane:Right
+    position:45.0
+    speed:10.0
+  }
+}

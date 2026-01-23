@@ -4,16 +4,17 @@
 class MovementSystem
 {
 public:
-	void Update( float dt, World& world )
+	void Update(float dt, World& world)
 	{
-		for (Entity e : world.View<Position, Velocity>())
-		{
-			auto& p = world.GetComponent<Position>(e);
-			auto& v = world.GetComponent<Velocity>(e);
+		auto entities = world.View<Position, Velocity>();
 
-			p.x += dt * v.valueX;
-			p.y += dt * v.valueY;
+		for (auto entity : entities)
+		{
+			auto& pos = world.GetComponent<Position>(entity);
+			auto& vel = world.GetComponent<Velocity>(entity);
+
+			pos.x += vel.valueX * dt;
+			pos.y += vel.valueY * dt;
 		}
-		
 	}
 };
