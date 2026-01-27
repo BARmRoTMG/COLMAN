@@ -1,7 +1,8 @@
 package configs;
 
 public interface Config {
-    void Create();
+    void create();
     String getName();
     int getVersion();
+    void close();
 }
