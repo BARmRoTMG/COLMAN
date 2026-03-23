@@ -41,6 +41,12 @@ flowchart TD
     end
 
 
+---
+
+## 🛠️ UML & Design Patterns
+
+The project heavily utilizes Design Patterns to ensure maintainability and low coupling. Below is a simplified class diagram highlighting the core patterns used:
+
 ```mermaid
 classDiagram
     class TopicManager {
