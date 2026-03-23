@@ -39,7 +39,7 @@ flowchart TD
         TopicB -.->|Trigger Update| Agent1
         Agent1 -->|Publish Result| TopicC[Topic: C]
     end
-
+```
 ---
 
 ## 🛠️ UML & Design Patterns
