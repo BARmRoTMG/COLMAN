@@ -43,38 +43,21 @@ The system is divided into two main layers: The Web Layer (Server \& Routing) an
 ```mermaid
 
 flowchart TD
+    Client((Client / Browser)) -->|HTTP Request| Server[HTTP Server Socket]
+    
+    subgraph Web Layer
+        Server -->|Raw Bytes| Parser[Request Parser]
+        Parser -->|Parsed URI| Router{Longest Match Router}
+        Router -->|/api/calc| CalcServ[Calc Servlet]
+        Router -->|/api/upload| UpServ[Upload Servlet]
+    end
 
-&#x20;   Client((Client / Browser)) -->|HTTP Request| Server\[HTTP Server Socket]
-
-&#x20;   
-
-&#x20;   subgraph Web Layer
-
-&#x20;       Server -->|Raw Bytes| Parser\[Request Parser]
-
-&#x20;       Parser -->|Parsed URI| Router{Longest Match Router}
-
-&#x20;       Router -->|/api/calc| CalcServ\[Calc Servlet]
-
-&#x20;       Router -->|/api/upload| UpServ\[Upload Servlet]
-
-&#x20;   end
-
-
-
-&#x20;   subgraph Computational Graph Engine
-
-&#x20;       CalcServ -->|Inject Data| TM((Topic Manager))
-
-&#x20;       TM -->|Notify| TopicA\[Topic: A]
-
-&#x20;       TM -->|Notify| TopicB\[Topic: B]
-
-&#x20;       TopicA -.->|Trigger Update| Agent1\[Plus Agent]
-
-&#x20;       TopicB -.->|Trigger Update| Agent1
-
-&#x20;       Agent1 -->|Publish Result| TopicC\[Topic: C]
-
-&#x20;   end
+    subgraph Computational Graph Engine
+        CalcServ -->|Inject Data| TM((Topic Manager))
+        TM -->|Notify| TopicA[Topic: A]
+        TM -->|Notify| TopicB[Topic: B]
+        TopicA -.->|Trigger Update| Agent1[Plus Agent]
+        TopicB -.->|Trigger Update| Agent1
+        Agent1 -->|Publish Result| TopicC[Topic: C]
+    end
 
