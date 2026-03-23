@@ -39,3 +39,54 @@ flowchart TD
         TopicB -.->|Trigger Update| Agent1
         Agent1 -->|Publish Result| TopicC[Topic: C]
     end
+
+---
+
+## 🛠️ UML & Design Patterns
+
+The project heavily utilizes Design Patterns to ensure maintainability and low coupling. Below is a simplified class diagram highlighting the core patterns used:
+
+classDiagram
+    class TopicManager {
+        - static instance: TopicManager
+        - topics: ConcurrentHashMap
+        + getInstance() TopicManager
+        + getTopic(name) Topic
+    }
+    <<Singleton>> TopicManager
+
+    class Topic {
+        - subs: List~Agent~
+        + subscribe(Agent)
+        + publish(Message)
+        + notifyAgents()
+    }
+    <<Observable>> Topic
+
+    class Agent {
+        <<Interface>>
+        + update()
+    }
+    <<Observer>> Agent
+
+    class PlusAgent {
+        + update()
+    }
+    
+    class ParallelAgent {
+        - wrappedAgent: Agent
+        + update()
+    }
+    <<Decorator>> ParallelAgent
+
+    class Servlet {
+        <<Interface>>
+        + handle(RequestInfo, OutputStream)
+    }
+    <<Strategy>> Servlet
+
+    TopicManager --> Topic : Manages
+    Topic --> Agent : Notifies
+    Agent <|.. PlusAgent : Implements
+    Agent <|.. ParallelAgent : Implements
+    ParallelAgent o-- Agent : Wraps
