@@ -1,0 +1,11 @@
+{
+  "model": "מאזדה 3",
+  "year": 2013,
+  "color": "שחור",
+  "complaints": [12, 65, 90],
+  "value": 85000,
+  "clients": [
+    { "name": "Moshe", "id": 123 },
+    { "name": "Shai",  "id": 456 }
+  ]
+}

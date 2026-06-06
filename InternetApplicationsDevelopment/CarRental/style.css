@@ -1,0 +1,190 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --border: #2a2a2a;
+  --accent: #e8c547;
+  --accent2: #4ab3f4;
+  --text: #f0f0f0;
+  --muted: #888;
+  --red: #f05a5a;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--accent);
+}
+
+header p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+}
+
+/* ---- CARD ---- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 32px;
+}
+
+.card-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* ---- CAR INFO ---- */
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.car-field {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.car-field label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.car-field span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ---- COMPLAINTS ---- */
+.complaints-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.badge {
+  background: #2a1a1a;
+  border: 1px solid var(--red);
+  color: var(--red);
+  border-radius: 6px;
+  padding: 4px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ---- CLIENTS ---- */
+.client-list {
+  display: grid;
+  gap: 12px;
+}
+
+.client-card {
+  background: #1a1e26;
+  border: 1px solid #2a3040;
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.client-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent2), #2a6fa8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.client-info p:first-child {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.client-info p:last-child {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ---- JSON block ---- */
+.json-block {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 20px 22px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #ccc;
+  white-space: pre;
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+}
+
+.json-key  { color: #4ab3f4; }
+.json-str  { color: #e8c547; }
+.json-num  { color: #f05a5a; }
+.json-bool { color: #a8d8a8; }
+.json-null { color: #888; }
+
+/* ---- Value display ---- */
+.value-display {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.value-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 18px 0;
+}
