@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | LinkedIn</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feed-page">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="feed-navbar">
+        <div class="feed-navbar-inner" style="max-width:1128px; margin:0 auto; display:flex; align-items:center; height:52px; padding:0 8px; gap:4px;">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html" style="text-decoration:none; margin-right:4px; flex-shrink:0;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"/>
+                </svg>
+            </a>
+
+            <!-- Search -->
+            <div class="feed-search" style="flex-shrink:0;">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <!-- Nav Icons -->
+            <div class="feed-nav-items ms-auto">
+                <!-- Home -->
+                <a href="index.html" class="nav-icon-link active">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="label">Home</span>
+                </a>
+                <!-- My Network -->
+                <a href="#" class="nav-icon-link">
+                    <i class="bi bi-people"></i>
+                    <span class="label">My Network</span>
+                </a>
+                <!-- Jobs -->
+                <a href="#" class="nav-icon-link">
+                    <i class="bi bi-briefcase"></i>
+                    <span class="label">Jobs</span>
+                </a>
+                <!-- Messaging -->
+                <a href="#" class="nav-icon-link" style="position:relative;">
+                    <i class="bi bi-chat-dots"></i>
+                    <span class="notif-badge">3</span>
+                    <span class="label">Messaging</span>
+                </a>
+                <!-- Notifications -->
+                <a href="#" class="nav-icon-link" style="position:relative;">
+                    <i class="bi bi-bell"></i>
+                    <span class="notif-badge">9+</span>
+                    <span class="label">Notifications</span>
+                </a>
+
+                <!-- Divider -->
+                <div class="nav-divider"></div>
+
+                <!-- Me (profile) -->
+                <a href="#" class="nav-profile">
+                    <img src="https://i.pravatar.cc/48?img=12" alt="Profile">
+                    <span style="font-size:11px; color:#666; display:flex; align-items:center; gap:2px;">
+                        Me <i class="bi bi-chevron-down" style="font-size:9px;"></i>
+                    </span>
+                </a>
+
+                <!-- Work -->
+                <a href="#" class="nav-icon-link">
+                    <i class="bi bi-grid-3x3-gap"></i>
+                    <span class="label">Work</span>
+                </a>
+
+                <!-- Divider -->
+                <div class="nav-divider"></div>
+
+                <!-- Premium -->
+                <a href="#" class="nav-premium-link">
+                    Try Premium<br>for free
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <div class="feed-container">
+        <div class="row g-3">
+
+            <!-- ========== LEFT SIDEBAR ========== -->
+            <div class="col-lg-3 d-none d-lg-block">
+
+                <!-- Profile Card -->
+                <div class="li-card">
+                    <div class="profile-card-banner"></div>
+                    <div style="position:relative; height:36px;">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="Bar Mashiach" class="profile-card-avatar">
+                    </div>
+                    <div class="profile-card-body">
+                        <a href="#" class="profile-card-name">Bar Mashiach</a>
+                        <div class="profile-card-headline">Computer Science Student at Ariel University</div>
+                    </div>
+                    <hr class="profile-card-divider">
+                    <div class="profile-stat-row">
+                        <span class="profile-stat-label">Profile viewers</span>
+                        <span class="profile-stat-value">47</span>
+                    </div>
+                    <div class="profile-stat-row">
+                        <span class="profile-stat-label">Post impressions</span>
+                        <span class="profile-stat-value">128</span>
+                    </div>
+                    <hr class="profile-card-divider">
+                    <div class="premium-cta-row">
+                        <i class="bi bi-lightning-fill"></i>
+                        <span>
+                            Access exclusive tools &amp; insights<br>
+                            <a href="#" class="premium-cta-link">Try Premium for free</a>
+                        </span>
+                    </div>
+                    <hr class="profile-card-divider">
+                    <a href="#" class="saved-items-row">
+                        <i class="bi bi-bookmark" style="font-size:18px; color:#666;"></i>
+                        Saved items
+                    </a>
+                </div>
+
+                <!-- Add to your feed -->
+                <div class="li-card add-feed-card">
+                    <div style="font-size:16px; font-weight:700; color:#191919; padding:12px 12px 0;">Add to your feed</div>
+                    <div style="padding:8px 12px;">
+
+                        <div class="add-feed-item">
+                            <i class="bi bi-hash" style="font-size:28px; color:#0A66C2; width:36px; text-align:center;"></i>
+                            <div>
+                                <div style="font-weight:600; font-size:14px;">#javascript</div>
+                                <div style="font-size:12px; color:#666;">Hashtag</div>
+                            </div>
+                            <button class="add-feed-follow-btn ms-auto">+ Follow</button>
+                        </div>
+
+                        <div class="add-feed-item">
+                            <i class="bi bi-hash" style="font-size:28px; color:#0A66C2; width:36px; text-align:center;"></i>
+                            <div>
+                                <div style="font-weight:600; font-size:14px;">#webdevelopment</div>
+                                <div style="font-size:12px; color:#666;">Hashtag</div>
+                            </div>
+                            <button class="add-feed-follow-btn ms-auto">+ Follow</button>
+                        </div>
+
+                        <div class="add-feed-item">
+                            <i class="bi bi-hash" style="font-size:28px; color:#0A66C2; width:36px; text-align:center;"></i>
+                            <div>
+                                <div style="font-weight:600; font-size:14px;">#tech</div>
+                                <div style="font-size:12px; color:#666;">Hashtag</div>
+                            </div>
+                            <button class="add-feed-follow-btn ms-auto">+ Follow</button>
+                        </div>
+
+                    </div>
+                    <div style="border-top:1px solid #E0DFDC; padding:10px 12px; font-size:14px; font-weight:600; color:#666; cursor:pointer; display:flex; align-items:center; gap:6px;">
+                        <i class="bi bi-arrow-right-circle"></i> View all recommendations
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ========== CENTER FEED ========== -->
+            <div class="col-lg-6 col-md-8">
+
+                <!-- Start a post -->
+                <div class="li-card start-post-card mb-2">
+                    <div class="card-body">
+                        <div class="start-post-row">
+                            <img src="https://i.pravatar.cc/48?img=12" alt="You" class="start-post-avatar">
+                            <a href="#" class="start-post-input">Start a post</a>
+                        </div>
+                        <div class="post-actions-row">
+                            <a href="#" class="post-action-btn">
+                                <i class="bi bi-image" style="color:#70B5F9;"></i>
+                                <span>Photo</span>
+                            </a>
+                            <a href="#" class="post-action-btn">
+                                <i class="bi bi-camera-video" style="color:#7FC15E;"></i>
+                                <span>Video</span>
+                            </a>
+                            <a href="#" class="post-action-btn d-none d-sm-flex">
+                                <i class="bi bi-calendar-event" style="color:#E7A33E;"></i>
+                                <span>Event</span>
+                            </a>
+                            <a href="#" class="post-action-btn d-none d-sm-flex">
+                                <i class="bi bi-file-text" style="color:#FC9295;"></i>
+                                <span>Write article</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sort bar -->
+                <div class="li-card mb-2">
+                    <div class="sort-bar">
+                        <span style="font-size:13px; color:#666; flex:1;">Sort by:</span>
+                        <span class="sort-label">
+                            <i class="bi bi-bar-chart-fill" style="color:#666;"></i>
+                            Top
+                            <i class="bi bi-chevron-down" style="font-size:11px;"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- ===== POST 1 ===== -->
+                <div class="li-card post-card mb-2">
+                    <div class="card-body">
+                        <div class="post-header">
+                            <img src="https://i.pravatar.cc/48?img=33" alt="Yoni Cohen" class="post-author-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="post-author-name">Yoni Cohen</a>
+                                <div class="post-headline">Senior Software Engineer at Google · Speaker · Open Source</div>
+                                <div class="post-time">3h · <i class="bi bi-globe2" style="font-size:11px;"></i></div>
+                            </div>
+                            <div class="post-header-actions">
+                                <button title="More options"><i class="bi bi-three-dots"></i></button>
+                                <button title="Close"><i class="bi bi-x-lg" style="font-size:16px;"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="post-text">
+                            Excited to share that I just completed my 100th open-source contribution! 🎉<br><br>
+                            The journey started 3 years ago with a small bug fix, and now it has grown into full feature implementations across 12 different repositories.<br><br>
+                            Key lesson: <strong>consistency beats intensity.</strong> 30 minutes a day beats one 10-hour session a week.<br><br>
+                            <span class="hashtag">#OpenSource</span> <span class="hashtag">#SoftwareEngineering</span> <span class="hashtag">#Career</span>
+                        </div>
+
+                        <div class="post-reactions-bar">
+                            <div class="d-flex align-items-center gap-1">
+                                <div class="reaction-icons">
+                                    <span style="font-size:18px;">👍</span>
+                                    <span style="font-size:18px; margin-left:-2px;">❤️</span>
+                                    <span style="font-size:18px; margin-left:-2px;">🎉</span>
+                                </div>
+                                <span class="reaction-count">2,847</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span class="post-comment-count">142 comments</span>
+                                <span>·</span>
+                                <span>38 reposts</span>
+                            </div>
+                        </div>
+
+                        <div class="post-actions">
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-hand-thumbs-up"></i> Like
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-chat"></i> Comment
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-repeat"></i> Repost
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-send"></i> Send
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== POST 2 (with image) ===== -->
+                <div class="li-card post-card mb-2">
+                    <div class="card-body">
+                        <div class="post-header">
+                            <img src="https://i.pravatar.cc/48?img=47" alt="Maya Levi" class="post-author-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="post-author-name">Maya Levi</a>
+                                <div class="post-headline">Frontend Developer | React · TypeScript · UI/UX Enthusiast</div>
+                                <div class="post-time">6h · <i class="bi bi-globe2" style="font-size:11px;"></i></div>
+                            </div>
+                            <div class="post-header-actions">
+                                <button title="More options"><i class="bi bi-three-dots"></i></button>
+                                <button title="Close"><i class="bi bi-x-lg" style="font-size:16px;"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="post-text">
+                            Just shipped a brand new design system for our product — 6 months of work, 80+ components, and endless iterations. 🚀<br><br>
+                            The hardest part wasn't the code. It was <strong>convincing the team to adopt it</strong> and ensuring it fit every edge case we had.<br><br>
+                            What design system tools do you use? Drop them below 👇<br><br>
+                            <span class="hashtag">#Frontend</span> <span class="hashtag">#DesignSystem</span> <span class="hashtag">#React</span> <span class="hashtag">#UI</span>
+                        </div>
+                    </div>
+
+                    <!-- Post image (outside card-body for full-width) -->
+                    <img src="https://picsum.photos/seed/designsystem/700/380" alt="Design System Preview" class="post-image">
+
+                    <div class="card-body pt-0">
+                        <div class="post-reactions-bar">
+                            <div class="d-flex align-items-center gap-1">
+                                <div class="reaction-icons">
+                                    <span style="font-size:18px;">👍</span>
+                                    <span style="font-size:18px; margin-left:-2px;">❤️</span>
+                                    <span style="font-size:18px; margin-left:-2px;">💡</span>
+                                </div>
+                                <span class="reaction-count">1,203</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span class="post-comment-count">87 comments</span>
+                                <span>·</span>
+                                <span>21 reposts</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-hand-thumbs-up"></i> Like
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-chat"></i> Comment
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-repeat"></i> Repost
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-send"></i> Send
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== POST 3 ===== -->
+                <div class="li-card post-card mb-2">
+                    <div class="card-body">
+                        <div class="post-header">
+                            <img src="https://i.pravatar.cc/48?img=60" alt="David Ben-David" class="post-author-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="post-author-name">David Ben-David</a>
+                                <div class="post-headline">CTO at StartupX · Entrepreneur · Investor · ex-Amazon</div>
+                                <div class="post-time">1d · <i class="bi bi-globe2" style="font-size:11px;"></i></div>
+                            </div>
+                            <div class="post-header-actions">
+                                <button title="More options"><i class="bi bi-three-dots"></i></button>
+                                <button title="Close"><i class="bi bi-x-lg" style="font-size:16px;"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="post-text">
+                            After 15 years in tech, here are the 5 things I wish someone told me early in my career:<br><br>
+                            1️⃣ <strong>Your network is your net worth</strong> — invest in relationships before you need them<br>
+                            2️⃣ <strong>Say yes, then figure it out</strong> — growth lives outside your comfort zone<br>
+                            3️⃣ <strong>Write everything down</strong> — ideas are worthless without execution<br>
+                            4️⃣ <strong>Fail faster</strong> — iteration beats perfection every time<br>
+                            5️⃣ <strong>Find a mentor</strong> — the best shortcut is learning from someone's mistakes<br><br>
+                            Which one resonates most with you?<br><br>
+                            <span class="hashtag">#Career</span> <span class="hashtag">#Leadership</span> <span class="hashtag">#Tech</span> <span class="hashtag">#Startup</span>
+                        </div>
+
+                        <div class="post-reactions-bar">
+                            <div class="d-flex align-items-center gap-1">
+                                <div class="reaction-icons">
+                                    <span style="font-size:18px;">👍</span>
+                                    <span style="font-size:18px; margin-left:-2px;">❤️</span>
+                                    <span style="font-size:18px; margin-left:-2px;">🎉</span>
+                                    <span style="font-size:18px; margin-left:-2px;">💡</span>
+                                </div>
+                                <span class="reaction-count">8,412</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span class="post-comment-count">634 comments</span>
+                                <span>·</span>
+                                <span>1,120 reposts</span>
+                            </div>
+                        </div>
+
+                        <div class="post-actions">
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-hand-thumbs-up"></i> Like
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-chat"></i> Comment
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-repeat"></i> Repost
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-send"></i> Send
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== POST 4 (with image) ===== -->
+                <div class="li-card post-card mb-2">
+                    <div class="card-body">
+                        <div class="post-header">
+                            <img src="https://i.pravatar.cc/48?img=5" alt="Noa Shapira" class="post-author-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="post-author-name">Noa Shapira</a>
+                                <div class="post-headline">AI Research Engineer at DeepMind · PhD Computer Science</div>
+                                <div class="post-time">2d · <i class="bi bi-globe2" style="font-size:11px;"></i></div>
+                            </div>
+                            <div class="post-header-actions">
+                                <button title="More options"><i class="bi bi-three-dots"></i></button>
+                                <button title="Close"><i class="bi bi-x-lg" style="font-size:16px;"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="post-text">
+                            We just published our paper on context-aware large language model fine-tuning. 🧠<br><br>
+                            TL;DR: By adapting the training curriculum dynamically based on model confidence, we reduced hallucination rates by <strong>34%</strong> while maintaining benchmark accuracy.<br><br>
+                            Preprint on arXiv. Link in comments!<br><br>
+                            <span class="hashtag">#AI</span> <span class="hashtag">#MachineLearning</span> <span class="hashtag">#LLM</span> <span class="hashtag">#Research</span>
+                        </div>
+                    </div>
+
+                    <img src="https://picsum.photos/seed/airesearch/700/380" alt="AI Research" class="post-image">
+
+                    <div class="card-body pt-0">
+                        <div class="post-reactions-bar">
+                            <div class="d-flex align-items-center gap-1">
+                                <div class="reaction-icons">
+                                    <span style="font-size:18px;">👍</span>
+                                    <span style="font-size:18px; margin-left:-2px;">💡</span>
+                                    <span style="font-size:18px; margin-left:-2px;">❤️</span>
+                                </div>
+                                <span class="reaction-count">4,931</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span class="post-comment-count">288 comments</span>
+                                <span>·</span>
+                                <span>512 reposts</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-hand-thumbs-up"></i> Like
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-chat"></i> Comment
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-repeat"></i> Repost
+                            </a>
+                            <a href="#" class="post-act-btn">
+                                <i class="bi bi-send"></i> Send
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ========== RIGHT SIDEBAR ========== -->
+            <div class="col-lg-3 d-none d-lg-block">
+
+                <!-- LinkedIn News -->
+                <div class="li-card news-card mb-2">
+                    <div class="card-body">
+                        <div class="news-header">
+                            <h3 class="news-title">LinkedIn News</h3>
+                            <i class="bi bi-info-circle" style="color:#666; font-size:18px; cursor:pointer;"></i>
+                        </div>
+
+                        <div class="news-item">
+                            <div class="news-item-title">AI reshapes software development roles</div>
+                            <div class="news-item-meta">1d ago · 24,581 readers</div>
+                        </div>
+                        <hr style="margin:6px 0; border-color:#f0f0f0;">
+
+                        <div class="news-item">
+                            <div class="news-item-title">Top skills employers want in 2024</div>
+                            <div class="news-item-meta">2d ago · 18,204 readers</div>
+                        </div>
+                        <hr style="margin:6px 0; border-color:#f0f0f0;">
+
+                        <div class="news-item">
+                            <div class="news-item-title">Remote work policies: what's changed</div>
+                            <div class="news-item-meta">3d ago · 11,870 readers</div>
+                        </div>
+                        <hr style="margin:6px 0; border-color:#f0f0f0;">
+
+                        <div class="news-item">
+                            <div class="news-item-title">Startup funding sees Q4 rebound</div>
+                            <div class="news-item-meta">4d ago · 8,453 readers</div>
+                        </div>
+                        <hr style="margin:6px 0; border-color:#f0f0f0;">
+
+                        <div class="news-item">
+                            <div class="news-item-title">Women in tech: closing the gap</div>
+                            <div class="news-item-meta">5d ago · 7,192 readers</div>
+                        </div>
+
+                        <div class="news-show-more">
+                            Show more <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- People you may know -->
+                <div class="li-card people-card mb-2">
+                    <div class="card-body">
+                        <div class="people-header">People you may know</div>
+
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/56?img=20" alt="Adi Katz" class="person-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="person-name">Adi Katz</a>
+                                <div class="person-headline">Backend Engineer at Microsoft</div>
+                                <div class="person-mutual">
+                                    <i class="bi bi-people" style="font-size:12px;"></i>
+                                    3 mutual connections
+                                </div>
+                                <button class="connect-btn">
+                                    <i class="bi bi-plus"></i> Connect
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/56?img=41" alt="Ron Peretz" class="person-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="person-name">Ron Peretz</a>
+                                <div class="person-headline">Data Scientist · ML Engineer</div>
+                                <div class="person-mutual">
+                                    <i class="bi bi-people" style="font-size:12px;"></i>
+                                    7 mutual connections
+                                </div>
+                                <button class="connect-btn">
+                                    <i class="bi bi-plus"></i> Connect
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="person-item" style="border-bottom:none;">
+                            <img src="https://i.pravatar.cc/56?img=28" alt="Tamar Gold" class="person-avatar">
+                            <div style="flex:1; min-width:0;">
+                                <a href="#" class="person-name">Tamar Gold</a>
+                                <div class="person-headline">Product Manager at Wix</div>
+                                <div class="person-mutual">
+                                    <i class="bi bi-people" style="font-size:12px;"></i>
+                                    12 mutual connections
+                                </div>
+                                <button class="connect-btn">
+                                    <i class="bi bi-plus"></i> Connect
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style="border-top:1px solid #E0DFDC; padding:10px 0 0; font-size:14px; font-weight:600; color:#666; cursor:pointer; display:flex; align-items:center; gap:6px; margin-top:4px;">
+                            <i class="bi bi-arrow-right-circle"></i> Show all recommendations
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="li-footer">
+                    <div class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#999"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div>
+                        <a href="#">About</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Privacy &amp; Terms</a>
+                        <a href="#">Ad Choices</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Business Services</a>
+                        <a href="#">Get the LinkedIn app</a>
+                        <a href="#">More</a>
+                    </div>
+                    <div style="font-size:12px; color:#999; margin-top:8px;">
+                        LinkedIn Corporation © 2024
+                    </div>
+                </div>
+
+            </div>
+            <!-- end right sidebar -->
+
+        </div>
+    </div>
+    <!-- end feed-container -->
+
+</body>
+</html>
